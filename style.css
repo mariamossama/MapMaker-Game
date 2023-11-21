@@ -1,0 +1,136 @@
+.title
+{
+    background-color: bisque;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color :brown;
+    letter-spacing: 2px;
+}
+.mission-label {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Convert text to uppercase (A, B, C, D) */
+    margin-bottom: 5px; /* Add some spacing between the label and the image */
+}
+body
+{
+    background-image: url("back.png");
+    background-size: cover; /* Make sure the background image covers the entire container */
+    backdrop-filter: blur(5px);
+    filter: brightness(80%) contrast(170%); 
+}
+#game-container {
+    padding: 50px;
+    display: flex; /* This enables Flexbox */
+    align-items: start; /* Align items to the start of the container vertically */
+}
+/* Style for the grid container */
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);    
+    gap: 2px; /* Gap between cells */
+    width: 500px; /* Adjust the grid container width as needed */
+    height: 500px; /* Adjust the grid container height as needed */
+    border: 1px solid #000; /* Border around the grid */
+}
+
+/* Style for individual grid cells */
+.grid-cell {
+    background-color: #fff; /* Background color for cells */
+    border: 1px solid #ccc; /* Border around cells */
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+
+.grid-cell img {
+    max-width: 100%; /* Ensure images do not exceed the cell width */
+    max-height: 100%; /* Ensure images do not exceed the cell height */
+    display: block; /* Remove extra space around the image */
+    margin: auto; /* Center the image within the cell */
+}
+
+#sidebar {
+    width: 200px; /* Adjust as needed */
+    height: 500px; /* Same as the grid height */
+    float: right; /* Position it to the right of the grid */
+    border: 1px solid #000; /* Add a border for visibility */
+    overflow-y: auto; /* Enable scrolling if the elements exceed the sidebar height */
+}
+.puzzle-element {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.element-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr); /* Adjust based on the maximum width of the shape */
+    gap: 0;
+}
+
+.element-cell {
+    width: 45px; /* Adjust the size as needed */
+    height: 45px;
+    padding: 0; /* Set padding to 0 */
+    margin: 0; /* Set margin to 0 */
+    box-sizing: border-box; }
+
+.element-cell.filled {
+    background-image: url('path_to_your_image.png'); /* Replace with the correct image path */
+    background-size: cover;
+}
+
+#sidebar .puzzle-element.selected {
+    border: 2px solid #ff0000;
+}
+
+
+.mission-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.mission-card img {
+    width: 300px; /* Adjust the size as needed */
+    margin-right: 10px; /* Adjust spacing between image and description */
+}
+
+
+.season-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    right: 10px;
+}
+
+.season-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.season-card h3 {
+    margin: 0;
+}
+
+.season-card p {
+    margin: 5px 0;
+}
+
+.season-card span {
+    font-weight: bold;
+}
+.highlighted {
+    border: 2px solid yellow; /* Change the style as needed */
+    background-color: yellow; /* Change the background color as needed */
+  }
+

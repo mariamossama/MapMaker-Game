@@ -1,0 +1,9 @@
+    // Create an <img> element
+            const img = document.createElement("img");
+            img.src = "base_tile.png"; // Replace with the appropriate image URL
+            img.alt = ""; // Add alt text as needed
+  
+              // Append the <img> element to the cell
+            cell.appendChild(img);
+            // You can add content or customize each cell further if needed.
+            // Example: cell.textContent = `${row}, ${col}`;
